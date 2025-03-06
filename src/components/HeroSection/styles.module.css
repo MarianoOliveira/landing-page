@@ -1,0 +1,113 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* Altura do header */
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(26, 43, 95, 0.1), transparent);
+  z-index: 1;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.content {
+  max-width: 700px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1A2B5F;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: rgba(26, 43, 95, 0.8);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.primaryButton {
+  display: inline-block;
+  background-color: #FF6B35;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.primaryButton:hover {
+  background-color: #ff8255;
+}
+
+.secondaryButton {
+  display: inline-block;
+  background-color: transparent;
+  color: #1A2B5F;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid #1A2B5F;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #1A2B5F;
+  color: white;
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .buttonGroup {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
