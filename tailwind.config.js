@@ -24,5 +24,11 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      backgroundColor: ['dark', 'light'],
+      textColor: ['dark', 'light'],
+    },
+  },
   plugins: [],
 }

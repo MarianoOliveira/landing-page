@@ -2,9 +2,17 @@
 
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { getWhatsAppLink } from '@/config/contact';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuItems = [
+    { href: '#beneficios', label: 'Benefícios' },
+    { href: '#servicos', label: 'Serviços' },
+    { href: '#portfolio', label: 'Portfólio' },
+    // { href: '#depoimentos', label: 'Depoimentos' },
+  ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,20 +29,19 @@ export default function Header() {
 
           {/* Menu Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#beneficios" className="text-primary hover:text-secondary transition-colors">
-              Benefícios
-            </a>
-            <a href="#servicos" className="text-primary hover:text-secondary transition-colors">
-              Serviços
-            </a>
-            <a href="#portfolio" className="text-primary hover:text-secondary transition-colors">
-              Portfólio
-            </a>
-            <a href="#depoimentos" className="text-primary hover:text-secondary transition-colors">
-              Depoimentos
-            </a>
+            {menuItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-primary hover:text-secondary transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
             <a
-              href="#contato"
+              href={getWhatsAppLink('budget')}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary"
             >
               Solicitar Orçamento
@@ -58,37 +65,21 @@ export default function Header() {
           } md:hidden bg-white py-4 border-t border-gray-100`}
         >
           <div className="flex flex-col space-y-4">
-            <a
-              href="#beneficios"
-              className="text-primary hover:text-secondary transition-colors px-4 py-2"
-              onClick={toggleMenu}
-            >
-              Benefícios
-            </a>
-            <a
-              href="#servicos"
-              className="text-primary hover:text-secondary transition-colors px-4 py-2"
-              onClick={toggleMenu}
-            >
-              Serviços
-            </a>
-            <a
-              href="#portfolio"
-              className="text-primary hover:text-secondary transition-colors px-4 py-2"
-              onClick={toggleMenu}
-            >
-              Portfólio
-            </a>
-            <a
-              href="#depoimentos"
-              className="text-primary hover:text-secondary transition-colors px-4 py-2"
-              onClick={toggleMenu}
-            >
-              Depoimentos
-            </a>
+            {menuItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-primary hover:text-secondary transition-colors px-4 py-2"
+                onClick={toggleMenu}
+              >
+                {item.label}
+              </a>
+            ))}
             <div className="px-4 pt-2">
               <a
-                href="#contato"
+                href={getWhatsAppLink('budget')}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary w-full text-center"
                 onClick={toggleMenu}
               >

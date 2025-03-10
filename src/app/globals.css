@@ -101,7 +101,7 @@ html {
   }
 
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +114,7 @@ html {
   }
 
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90;
+    @apply bg-primary text-white hover:bg-primary-dark;
     background-color: var(--primary);
     color: #FFFFFF;
   }
@@ -124,7 +124,7 @@ html {
   }
 
   .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary/90;
+    @apply bg-secondary text-white hover:bg-secondary-dark;
     background-color: var(--secondary);
     color: #FFFFFF;
   }
@@ -134,7 +134,7 @@ html {
   }
 
   .btn-outline {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+    @apply border-2 border-current transition-colors duration-200;
     border: 2px solid var(--primary);
     color: var(--primary);
     background-color: transparent;
@@ -143,6 +143,19 @@ html {
   .btn-outline:hover {
     background-color: var(--primary);
     color: #FFFFFF;
+  }
+
+  /* Círculos decorativos */
+  .decorative-circle {
+    @apply absolute rounded-full opacity-10 blur-3xl pointer-events-none;
+  }
+
+  .decorative-circle-1 {
+    @apply decorative-circle top-20 right-0 w-96 h-96 bg-secondary;
+  }
+
+  .decorative-circle-2 {
+    @apply decorative-circle -bottom-20 -left-20 w-72 h-72 bg-secondary;
   }
 }
 

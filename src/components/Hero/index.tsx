@@ -1,30 +1,43 @@
+import { getWhatsAppLink } from '@/config/contact';
+import { FaArrowRight } from 'react-icons/fa';
+
 export default function Hero() {
   return (
-    <section id="inicio" className="section bg-primary text-white">
-      <div className="container">
-        <div className="grid md:grid-cols-2 gap-4 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Desenvolvimento Web Profissional
-            </h1>
-            <p className="text-lg md:text-xl mb-8">
-              Transforme sua presença digital com soluções web modernas, 
-              responsivas e otimizadas para resultados.
-            </p>
-            <div className="flex gap-4">
-              <a href="#contato" className="btn btn-secondary">
-                Começar Projeto
-              </a>
-              <a href="#portfolio" className="btn btn-outline">
-                Ver Portfólio
-              </a>
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              {/* Placeholder para imagem ou ilustração */}
-              <div className="w-full h-64 bg-gray-100 rounded-lg"></div>
-            </div>
+    <section id="inicio" className="min-h-screen flex items-center bg-gradient-to-br from-primary to-primary-dark relative overflow-hidden">
+      {/* Círculos decorativos */}
+      <div className="decorative-circle-1"></div>
+      <div className="decorative-circle-2"></div>
+
+      <div className="container mx-auto px-4 py-20 relative">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Transforme sua Presença Digital com Soluções Web Modernas
+          </h1>
+          
+          <p className="text-lg md:text-xl text-white/90 mb-12">
+            Desenvolvimento de sites e aplicações web responsivas, 
+            otimizadas para resultados e focadas na experiência do usuário.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href={getWhatsAppLink('start')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary group"
+            >
+              Começar Projeto
+              <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
+            
+            <a
+              href={getWhatsAppLink('info')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline text-white border-white hover:bg-white hover:text-primary"
+            >
+              Saber Mais
+            </a>
           </div>
         </div>
       </div>

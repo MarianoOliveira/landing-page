@@ -2,21 +2,15 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
-import { contact } from '@/config/contact';
+import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { contact, getWhatsAppLink } from '@/config/contact';
 
 const menuItems = [
   { label: 'Início', href: '#inicio' },
   { label: 'Benefícios', href: '#beneficios' },
   { label: 'Serviços', href: '#servicos' },
   { label: 'Portfólio', href: '#portfolio' },
-  { label: 'Depoimentos', href: '#depoimentos' },
-];
-
-const socialLinks = [
-  { icon: FaInstagram, href: '#', label: 'Instagram' },
-  { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
-  { icon: FaWhatsapp, href: '#', label: 'WhatsApp' },
+  // { label: 'Depoimentos', href: '#depoimentos' },
 ];
 
 export default function Footer() {
@@ -51,6 +45,7 @@ export default function Footer() {
               >
                 <FaLinkedin size={24} />
               </a>
+              {/* Instagram icon hidden
               <a
                 href={contact.social.instagram}
                 target="_blank"
@@ -60,6 +55,7 @@ export default function Footer() {
               >
                 <FaInstagram size={24} />
               </a>
+              */}
             </div>
           </div>
 
@@ -91,7 +87,7 @@ export default function Footer() {
                 {contact.email}
               </a>
               <a
-                href={`https://wa.me/${contact.whatsapp}`}
+                href={getWhatsAppLink('info')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
