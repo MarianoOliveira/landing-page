@@ -1,7 +1,7 @@
 'use client';
 
 import { IconType } from 'react-icons';
-import { FaPaintBrush, FaMobile, FaChartLine, FaHeadset } from 'react-icons/fa';
+import { FaPaintBrush, FaMobile, FaChartLine, FaHeadset, FaMobileAlt, FaBolt, FaSearch } from 'react-icons/fa';
 import styles from './styles.module.css';
 
 type BenefitCardProps = {
@@ -45,7 +45,30 @@ const BenefitCard = ({ icon: Icon, title, description }: BenefitCardProps) => {
   );
 };
 
-export const Benefits = () => {
+export default function Benefits() {
+  const benefits = [
+    {
+      icon: FaMobileAlt,
+      title: "Design Responsivo",
+      description: "Sites que se adaptam perfeitamente a qualquer dispositivo, de smartphones a desktops."
+    },
+    {
+      icon: FaBolt,
+      title: "Alta Performance",
+      description: "Páginas otimizadas para carregamento rápido e melhor experiência do usuário."
+    },
+    {
+      icon: FaSearch,
+      title: "SEO Otimizado",
+      description: "Código limpo e estruturado para melhor posicionamento nos mecanismos de busca."
+    },
+    {
+      icon: FaHeadset,
+      title: "Suporte Contínuo",
+      description: "Acompanhamento e manutenção para manter seu site sempre atualizado e seguro."
+    }
+  ];
+
   return (
     <section id="beneficios" className={styles.benefits}>
       <div className={styles.container}>
@@ -60,9 +83,18 @@ export const Benefits = () => {
         </div>
 
         <div className={styles.grid}>
-          {benefits.map((benefit, index) => (
-            <BenefitCard key={index} {...benefit} />
-          ))}
+          {benefits.map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <div key={index} className={styles.card}>
+                <div className={styles.iconWrapper}>
+                  <Icon className={styles.icon} />
+                </div>
+                <h3 className={styles.cardTitle}>{benefit.title}</h3>
+                <p className={styles.cardDescription}>{benefit.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

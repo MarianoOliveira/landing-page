@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
-import styles from './styles.module.css';
+import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { contact } from '@/config/contact';
 
 const menuItems = [
   { label: 'Início', href: '#inicio' },
@@ -19,92 +19,100 @@ const socialLinks = [
   { icon: FaWhatsapp, href: '#', label: 'WhatsApp' },
 ];
 
-export const Footer = () => {
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer id="contato" className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.grid}>
-          {/* Logo e Descrição */}
-          <div className={styles.brand}>
-            <Link href="/" className={styles.logo}>
-              <Image src="/images/logo-white.png" alt="Logo" width={150} height={40} />
-            </Link>
-            <p className={styles.description}>
-              Entre em contato e vamos criar um site que realmente gere resultados para o seu negócio.
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container">
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Informações sobre o desenvolvedor */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Mariano Oliveira</h3>
+            <p className="text-gray-400 mb-4">
+              Desenvolvimento web profissional com foco em resultados para seu negócio.
             </p>
-            <Link
-              href="#contato"
-              className={styles.ctaButton}
-            >
-              Comece Agora
-            </Link>
+            <div className="flex gap-4">
+              <a
+                href={contact.social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <FaGithub size={24} />
+              </a>
+              <a
+                href={contact.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={24} />
+              </a>
+              <a
+                href={contact.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={24} />
+              </a>
+            </div>
           </div>
 
           {/* Links Rápidos */}
-          <div className={styles.links}>
-            <h3 className={styles.title}>Links Rápidos</h3>
-            <ul className={styles.menu}>
+          <div>
+            <h3 className="text-xl font-bold mb-4">Links Rápidos</h3>
+            <nav className="flex flex-col gap-2">
               {menuItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className={styles.link}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {item.label}
+                </Link>
               ))}
-            </ul>
+            </nav>
           </div>
 
           {/* Contato */}
-          <div className={styles.contact}>
-            <h3 className={styles.title}>Vamos Conversar?</h3>
-            <ul className={styles.contactInfo}>
-              <li>
-                <a
-                  href="mailto:contato@exemplo.com"
-                  className={styles.link}
-                >
-                  contato@exemplo.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+5511999999999"
-                  className={styles.link}
-                >
-                  (11) 99999-9999
-                </a>
-              </li>
-            </ul>
-
-            {/* Redes Sociais */}
-            <div className={styles.social}>
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    className={styles.socialLink}
-                    aria-label={social.label}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon />
-                  </a>
-                );
-              })}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Contato</h3>
+            <div className="flex flex-col gap-2">
+              <a
+                href={`mailto:${contact.email}`}
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+              >
+                <FaEnvelope />
+                {contact.email}
+              </a>
+              <a
+                href={`https://wa.me/${contact.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+              >
+                <FaWhatsapp />
+                {contact.phone}
+              </a>
+              <p className="text-gray-400">
+                {contact.address.city}, {contact.address.state}
+                <br />
+                {contact.address.country}
+              </p>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className={styles.copyright}>
-          <p>&copy; {new Date().getFullYear()} Seu Nome. Todos os direitos reservados.</p>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; {currentYear} Mariano Oliveira. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
   );
-};
+}
