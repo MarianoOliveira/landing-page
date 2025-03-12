@@ -16,7 +16,7 @@ const services: Service[] = [
   {
     icon: FaLaptopCode,
     title: "Sites Institucionais",
-    description: "Desenvolvimento de sites profissionais para apresentar sua empresa e conquistar mais clientes."
+    description: "Tenha um site profissional, moderno e otimizado para destacar sua empresa e atrair mais clientes."
   },
   {
     icon: FaShoppingCart,
@@ -26,12 +26,12 @@ const services: Service[] = [
   {
     icon: FaMobileAlt,
     title: "Landing Pages",
-    description: "Páginas de conversão focadas em transformar visitantes em leads e clientes."
+    description: "Criamos páginas de alta conversão que transformam visitantes em clientes, aumentando suas oportunidades de negócio."
   },
   {
     icon: FaSearch,
-    title: "Otimização SEO",
-    description: "Estratégias para melhorar seu posicionamento nos mecanismos de busca."
+    title: "Outros Projetos",
+    description: "Precisa de um site diferente? Desenvolvemos soluções personalizadas sob medida para sua necessidade. Fale conosco!"
   }
 ];
 
@@ -39,9 +39,10 @@ export default function Services() {
   return (
     <section id="servicos" className={styles.services}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Nossos Serviços</h2>
+        <h2 className={styles.title}>O Site Perfeito para Seu Negócio Está Aqui.</h2>
         <p className={styles.subtitle}>
-          Soluções completas para sua presença online
+        Criamos sites modernos, rápidos e otimizados para conversões. 
+        Você foca no seu negócio, nós cuidamos da sua presença digital.
         </p>
         
         <div className={styles.grid}>

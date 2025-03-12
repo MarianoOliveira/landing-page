@@ -11,12 +11,11 @@ export default function Hero() {
       <div className="container mx-auto px-4 py-20 relative">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Transforme sua Presença Digital com Soluções Web Modernas
+          Tenha um Site Profissional que Atraia e Converta Clientes.
           </h1>
           
           <p className="text-lg md:text-xl text-white/90 mb-12">
-            Desenvolvimento de sites e aplicações web responsivas, 
-            otimizadas para resultados e focadas na experiência do usuário.
+          Desenvolvemos sites e landing pages que destacam sua marca, conquistam novos clientes e impulsionam seu negócio. Soluções personalizadas para psicólogos, nutricionistas, dentistas, advogados e qualquer profissional que busca presença online de impacto.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -26,7 +25,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn btn-secondary group"
             >
-              Começar Projeto
+              🚀 Iniciar Meu Projeto
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
             

@@ -10,13 +10,13 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-commerce de Moda",
-    description: "Loja virtual completa com integração de pagamentos e gestão de estoque",
+    title: "Site Institucional para Psicóloga",
+    description: "Desenvolvemos um site moderno e profissional para destacar os serviços e especialidades dessa psicóloga, proporcionando uma presença digital forte e confiável.",
     tags: ["Next.js", "Stripe", "MongoDB"]
   },
   {
-    title: "Blog Corporativo",
-    description: "Blog responsivo com sistema de gestão de conteúdo",
+    title: "Presença Online",
+    description: "Este site que você está navegando foi criado por nós! Um exemplo de design otimizado, responsivo e focado em conversão.",
     tags: ["React", "Tailwind", "Headless CMS"]
   },
   {
@@ -35,9 +35,9 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="section">
       <div className="container">
-        <h2 className="section-title">Portfólio</h2>
+        <h2 className="section-title">Resultados Reais, Projetos de Sucesso.</h2>
         <p className="section-subtitle">
-          Conheça alguns dos projetos que desenvolvi
+        Conheça alguns dos sites e landing pages que ajudamos a transformar em verdadeiras máquinas de conversão.
         </p>
         
         <div className="grid md:grid-cols-2 gap-6">

@@ -77,8 +77,10 @@ export default function Benefits() {
             Por Que Escolher Nossos Serviços?
           </h2>
           <p className={styles.subtitle}>
-            Oferecemos soluções completas para você se destacar online, com designs modernos, 
-            funcionalidades avançadas e suporte contínuo.
+          Criamos sites que não apenas impressionam, 
+          mas que realmente geram negócios. 
+          Com design moderno, tecnologia avançada e suporte contínuo, 
+          sua presença online estará sempre um passo à frente da concorrência.
           </p>
         </div>
 
