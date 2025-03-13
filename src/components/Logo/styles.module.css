@@ -1,0 +1,14 @@
+.logo {
+  display: inline-block;
+  position: relative;
+}
+
+.image {
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .image {
+  transform: scale(1.05);
+}

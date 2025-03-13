@@ -14,7 +14,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Site Institucional para Psicóloga",
-    description: "Desenvolvemos um site moderno e profissional para destacar os serviços e especialidades dessa psicóloga, proporcionando uma presença digital forte e confiável.",
+    description: "Desenvolvemos um site moderno e profissional para destacar os serviços da psicóloga e fortalecer sua presença digital.",
     imageUrl: "/images/portfolio/psicologa-preview.jpg",
     projectUrl: "https://institutional-site.vercel.app/"
   },
@@ -27,6 +27,11 @@ const projects: Project[] = [
 ];
 
 export default function Portfolio() {
+  const handleCtaClick = () => {
+    const message = encodeURIComponent("Olá! Vim pelo site e gostaria de iniciar um projeto com você.");
+    window.open(`https://wa.me/5521993937690?text=${message}`, '_blank');
+  };
+
   return (
     <section id="portfolio" className={styles.section}>
       <div className={styles.container}>
@@ -58,6 +63,14 @@ export default function Portfolio() {
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className={styles.ctaContainer}>
+          <button onClick={handleCtaClick} className={styles.ctaButton}>
+            <span className={styles.ctaIcon}>💡</span>
+            <span>Começar Meu Projeto</span>
+            <span className={styles.ctaArrow}>→</span>
+          </button>
         </div>
       </div>
     </section>

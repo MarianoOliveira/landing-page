@@ -1,7 +1,7 @@
 'use client';
 
 import { IconType } from 'react-icons';
-import { FaPaintBrush, FaMobile, FaChartLine, FaHeadset, FaMobileAlt, FaBolt, FaSearch } from 'react-icons/fa';
+import { FaPaintBrush, FaMobile, FaChartLine, FaHeadset, FaMobileAlt, FaBolt, FaSearch, FaWhatsapp } from 'react-icons/fa';
 import styles from './styles.module.css';
 
 type BenefitCardProps = {
@@ -69,6 +69,9 @@ export default function Benefits() {
     }
   ];
 
+  const whatsappMessage = encodeURIComponent("Olá! Vim pelo site e gostaria de solicitar um orçamento.");
+  const whatsappLink = `https://wa.me/5521993937690?text=${whatsappMessage}`;
+
   return (
     <section id="beneficios" className={styles.benefits}>
       <div className={styles.container}>
@@ -77,10 +80,10 @@ export default function Benefits() {
             Por Que Escolher Nossos Serviços?
           </h2>
           <p className={styles.subtitle}>
-          Criamos sites que não apenas impressionam, 
-          mas que realmente geram negócios. 
-          Com design moderno, tecnologia avançada e suporte contínuo, 
-          sua presença online estará sempre um passo à frente da concorrência.
+            Criamos sites que não apenas impressionam, 
+            mas que realmente geram negócios. 
+            Com design moderno, tecnologia avançada e suporte contínuo, 
+            sua presença online estará sempre um passo à frente da concorrência.
           </p>
         </div>
 
@@ -97,6 +100,13 @@ export default function Benefits() {
               </div>
             );
           })}
+        </div>
+
+        <div className={styles.ctaContainer}>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
+            <FaWhatsapp className={styles.ctaIcon} />
+            Quero Esses Benefícios
+          </a>
         </div>
       </div>
     </section>

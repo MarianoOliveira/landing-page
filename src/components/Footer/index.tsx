@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { contact, getWhatsAppLink } from '@/config/contact';
+import Logo from '../Logo';
 
 const menuItems = [
   { label: 'Início', href: '#inicio' },
@@ -22,7 +23,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Informações sobre o desenvolvedor */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Mariano Oliveira</h3>
+            <Logo variant="light" className="mb-4" />
             <p className="text-gray-400 mb-4">
               Desenvolvimento web profissional com foco em resultados para seu negócio.
             </p>

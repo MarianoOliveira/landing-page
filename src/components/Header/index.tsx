@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { getWhatsAppLink } from '@/config/contact';
+import Logo from '../Logo';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +24,7 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#inicio" className="text-2xl font-bold text-primary">
-            MarianoOliveira
-          </a>
+          <Logo />
 
           {/* Menu Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
