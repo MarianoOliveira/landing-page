@@ -20,7 +20,7 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'Arial', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Arial', 'sans-serif'],
       },
     },
   },
@@ -31,4 +31,5 @@ module.exports = {
     },
   },
   plugins: [],
+  important: true,
 }
