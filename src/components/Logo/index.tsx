@@ -15,8 +15,8 @@ export default function Logo({ variant = 'dark', className = '' }: LogoProps) {
       <Image
         src={variant === 'light' ? '/images/logo/logo-white.png' : '/images/logo/logo.png'}
         alt="Mariano Oliveira"
-        width={150}
-        height={40}
+        width={120}
+        height={32}
         className={styles.image}
         priority
       />
