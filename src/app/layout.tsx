@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import SEO from '@/components/SEO';
 import "../config/fontawesome";
 import "./globals.css";
 
@@ -9,11 +10,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Desenvolvimento Web Profissional",
-  description: "Criação de sites, landing pages e soluções web personalizadas para o seu negócio",
-  keywords: "desenvolvimento web, sites, landing pages, web design, responsivo",
-  authors: [{ name: "Mariano Oliveira" }],
-  robots: "index, follow",
+  metadataBase: new URL('https://marianooliveira.dev.br'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    siteName: 'Mariano Oliveira - Desenvolvimento Web',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'adicione_seu_codigo_de_verificacao_aqui',
+  },
 };
 
 export default function RootLayout({
@@ -23,6 +42,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={inter.variable}>
+      <head>
+        <SEO />
+      </head>
       <body className="antialiased">
         {children}
       </body>

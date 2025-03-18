@@ -19,10 +19,10 @@ const projects: Project[] = [
     projectUrl: "https://institutional-site.vercel.app/"
   },
   {
-    title: "Presença Online",
+    title: "Destak Se",
     description: "Este site que você está navegando foi criado por nós! Um exemplo de design otimizado, responsivo e focado em conversão.",
-    imageUrl: "/images/portfolio/presenca-online-preview.jpg",
-    projectUrl: "/"
+    imageUrl: "/images/portfolio/destakse-preview.jpg",
+    projectUrl: "https://destakse.com/"
   }
 ];
 

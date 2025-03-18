@@ -74,6 +74,9 @@
   box-shadow: 0 10px 30px rgba(26, 43, 95, 0.1);
   transition: all 0.3s ease;
   border: 1px solid rgba(26, 43, 95, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -84,10 +87,15 @@
 
 .content {
   padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .iconTitle {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
@@ -115,6 +123,7 @@
   line-height: 1.7;
   margin: 1rem 0 2rem;
   font-size: 1.05rem;
+  flex: 1;
 }
 
 .cardFooter {
@@ -202,12 +211,6 @@
   opacity: 1;
 }
 
-.overlayIcon {
-  font-size: 3rem;
-  color: white;
-}
-
-/* Media Queries */
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -217,9 +220,5 @@
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .sectionTitle {
-    font-size: 3rem;
   }
 }
