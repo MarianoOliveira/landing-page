@@ -9,8 +9,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { href: '#beneficios', label: 'Benefícios' },
     { href: '#servicos', label: 'Serviços' },
+    { href: '#beneficios', label: 'Benefícios' },
     { href: '#portfolio', label: 'Portfólio' },
     // { href: '#depoimentos', label: 'Depoimentos' },
   ];
