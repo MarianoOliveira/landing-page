@@ -46,7 +46,7 @@ export default function Services() {
           <h2 className={styles.sectionTitle}>O Site Perfeito para Seu Negócio Está Aqui</h2>
           <p className={styles.sectionSubtitle}>
             Criamos sites modernos, rápidos e otimizados para conversões. 
-            Você foca no seu negócio, nós cuidamos da sua presença digital.
+            Você foca no seu negócio, nós cuidamos da sua presença online.
           </p>
         </div>
         
