@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'adicione_seu_codigo_de_verificacao_aqui',
+    google: '_gm0Ou7Q9wH_mVZQZGREXTzaf0k_zbqhdjb_WRCiRtw',
   },
 };
 
