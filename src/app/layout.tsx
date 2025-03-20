@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://marianooliveira.dev.br'),
+  metadataBase: new URL('https://www.destakse.com'),
   alternates: {
     canonical: '/',
   },

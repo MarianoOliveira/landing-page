@@ -2,11 +2,11 @@ export const defaultSEO = {
   titleTemplate: '%s | Mariano Oliveira - Desenvolvimento Web',
   defaultTitle: 'Desenvolvimento Web Profissional | Sites e Landing Pages',
   description: 'Criação de sites profissionais e landing pages sob medida para psicólogos, nutricionistas, dentistas, advogados e profissionais que buscam uma presença online de impacto.',
-  canonical: 'https://marianooliveira.dev.br',
+  canonical: 'https://www.destakse.com',
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://marianooliveira.dev.br',
+    url: 'https://www.destakse.com',
     siteName: 'Mariano Oliveira - Desenvolvimento Web',
     title: 'Desenvolvimento Web Profissional | Sites e Landing Pages',
     description: 'Criação de sites profissionais e landing pages sob medida para psicólogos, nutricionistas, dentistas, advogados e profissionais que buscam uma presença online de impacto.',
