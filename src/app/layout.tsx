@@ -11,6 +11,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.destakse.com'),
+  title: 'Desenvolvimento Web Profissional | Sites e Landing Pages',
+  description: 'Criação de sites profissionais e landing pages sob medida para psicólogos, nutricionistas, dentistas, advogados e profissionais que buscam uma presença online de impacto.',
   alternates: {
     canonical: '/',
   },
