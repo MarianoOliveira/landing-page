@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
-import HeroSection from "@/components/landing/HeroSection";
-import BenefitsSection from "@/components/landing/BenefitsSection";
-import TestimonialsSection from "@/components/landing/TestimonialsSection";
-import LeadForm from "@/components/landing/LeadForm";
-import CTASection from "@/components/landing/CTASection";
-import StatsSection from "@/components/landing/StatsSection";
-import FAQSection from "@/components/landing/FAQSection";
-import PortfolioSection from "@/components/landing/PortfolioSection";
+import HeroSection from "../components/landing/HeroSection";
+import BenefitsSection from "../components/landing/BenefitsSection";
+import TestimonialsSection from "../components/landing/TestimonialsSection";
+import LeadForm from "../components/landing/LeadForm";
+import CTASection from "../components/landing/CTASection";
+import StatsSection from "../components/landing/StatsSection";
+import FAQSection from "../components/landing/FAQSection";
+import PortfolioSection from "../components/landing/PortfolioSection";
 
 const Landing = () => {
   const formRef = useRef<HTMLDivElement>(null);

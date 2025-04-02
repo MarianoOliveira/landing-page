@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/landing-page/:path*",
-      "destination": "/index.html"
-    }
-  ]
-}
