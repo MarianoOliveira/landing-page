@@ -10,7 +10,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <Toaster />
     <Sonner />
-    <BrowserRouter basename="/landing-page">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="*" element={<Landing />} />
