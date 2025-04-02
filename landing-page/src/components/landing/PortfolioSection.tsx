@@ -136,8 +136,8 @@ const PortfolioSection = () => {
               ))}
             </CarouselContent>
             <div className="flex justify-center mt-4">
-              <CarouselPrevious className="relative static translate-y-0 -left-0 mr-2" />
-              <CarouselNext className="relative static translate-y-0 -right-0" />
+              <CarouselPrevious className="translate-y-0 -left-0 mr-2" />
+              <CarouselNext className="translate-y-0 -right-0" />
             </div>
           </Carousel>
         </div>
