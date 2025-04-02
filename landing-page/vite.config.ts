@@ -6,7 +6,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/landing-page/",
   server: {
     host: "::",
     port: 8080,
