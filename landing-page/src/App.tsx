@@ -1,15 +1,22 @@
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as Sonner } from "./components/ui/sonner";
-import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 
 const queryClient = new QueryClient();
 
+// Wrapper component for TooltipProvider
+const TooltipWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <TooltipPrimitive.Provider delayDuration={0}>
+    {children}
+  </TooltipPrimitive.Provider>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipPrimitive.Provider>
+    <TooltipWrapper>
       <Toaster />
       <Sonner />
       <BrowserRouter basename="/landing-page">
@@ -18,7 +25,7 @@ const App = () => (
           <Route path="*" element={<Landing />} />
         </Routes>
       </BrowserRouter>
-    </TooltipPrimitive.Provider>
+    </TooltipWrapper>
   </QueryClientProvider>
 );
 
