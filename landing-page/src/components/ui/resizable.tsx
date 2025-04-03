@@ -29,7 +29,7 @@ const ResizablePanel = React.forwardRef<
     )}
     {...props}
   />
-)
+));
 
 const ResizableHandle = ResizablePrimitive.PanelResizeHandle
 
