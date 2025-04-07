@@ -1,17 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: '/landing-page',
-        destination: 'https://landing-destakse.vercel.app',
-      },
-      {
-        source: '/landing-page/:path*',
-        destination: 'https://landing-destakse.vercel.app/:path*',
-      },
-    ];
-  },
   images: {
     remotePatterns: [
       {
@@ -21,10 +9,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'robohash.org',
-      },
-      {
-        protocol: 'https',
-        hostname: 'landing-destakse.vercel.app',
       }
     ],
   },
