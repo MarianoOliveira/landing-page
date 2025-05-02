@@ -70,7 +70,7 @@ export default function Benefits() {
   ];
 
   const whatsappMessage = encodeURIComponent("Olá! Vim pelo site e gostaria de solicitar um orçamento.");
-  const whatsappLink = `https://wa.me/5521993937690?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/5521998358424?text=${whatsappMessage}`;
 
   return (
     <section id="beneficios" className={styles.benefits}>

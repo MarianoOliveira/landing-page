@@ -29,7 +29,7 @@ const projects: Project[] = [
 export default function Portfolio() {
   const handleCtaClick = () => {
     const message = encodeURIComponent("Olá! Vim pelo site e gostaria de iniciar um projeto com você.");
-    window.open(`https://wa.me/5521993937690?text=${message}`, '_blank');
+    window.open(`https://wa.me/5521998358424?text=${message}`, '_blank');
   };
 
   return (

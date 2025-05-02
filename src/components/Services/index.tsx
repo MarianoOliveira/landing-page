@@ -53,7 +53,7 @@ export default function Services() {
         <div className={styles.grid}>
           {services.map((service, index) => {
             const Icon = service.icon;
-            const whatsappLink = `https://wa.me/5521993937690?text=${encodeURIComponent(service.whatsappMessage)}`;
+            const whatsappLink = `https://wa.me/5521998358424?text=${encodeURIComponent(service.whatsappMessage)}`;
             
             return (
               <div key={index} className={styles.card}>

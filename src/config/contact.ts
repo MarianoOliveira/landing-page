@@ -2,7 +2,7 @@ export const contact = {
   email: "marianooliveiradasilva@gmail.com",
   phone: "+55 (21) 99393-7690",
   whatsapp: {
-    number: '5521993937690',
+    number: '5521998358424',
     messages: {
       budget: 'Olá! Vim pelo site e gostaria de solicitar um orçamento.',
       info: 'Olá! Vim pelo site e gostaria de saber mais sobre seus serviços.',
