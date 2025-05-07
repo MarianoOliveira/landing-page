@@ -1,6 +1,6 @@
 export const contact = {
   email: "marianooliveiradasilva@gmail.com",
-  phone: "+55 (21) 99393-7690",
+  phone: "+55 (21) 99835-8424",
   whatsapp: {
     number: '5521998358424',
     messages: {
